@@ -1,6 +1,22 @@
 /**
- * TenUpTheme: Shared Styles.
+ * PorchyTenUpTheme: Shared Styles.
  * These styles are shared between the front end and admin
  * https://project-website.tld
  *
  */
+
+
+.emphasis-heading {
+	color: var(--primary-color);
+	font-family: var(--emphasise--font-family);
+	text-shadow: 1px 1px var(--light-highlight-color);
+}
+
+.smaller-font {
+	font-size: 0.85em;
+}
+
+.narrow {
+	margin: 0 auto;
+	max-width: 650px;
+}

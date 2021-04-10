@@ -1,7 +1,7 @@
 {
-  "name": "10up Theme",
-  "short_name": "10up Theme",
-  "description": "Project description for 10up Theme",
+  "name": "Porchy based on 10up Theme",
+  "short_name": "Porchy based on 10up Theme",
+  "description": "Site for Porchy Ltd",
   "display": "standalone",
   "start_url": "/?utm_source=app",
   "background_color": "#232323",

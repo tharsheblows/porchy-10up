@@ -1,0 +1,7 @@
+.margin-left {
+	margin-left: 1em;
+}
+
+.a--margin-left {
+	margin-left: var(--a--margin-left);
+}

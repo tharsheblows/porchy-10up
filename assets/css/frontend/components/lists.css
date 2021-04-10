@@ -1,0 +1,9 @@
+.horizontal-list li {
+	display: inline;
+	padding: 0 0.5em;
+}
+
+.no-bullets {
+	list-style: none;
+	padding-left: 0;
+}

@@ -1,0 +1,15 @@
+.border-top {
+	border-radius: 10px;
+	border-top: 4px solid var(--primary-color);
+}
+
+.border-bottom {
+	border-bottom: 4px solid var(--primary-color);
+	border-radius: 10px;
+}
+
+.border-left {
+	border-left: 4px solid var(--primary-color);
+	border-radius: 10px;
+	padding-left: 1em;
+}

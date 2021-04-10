@@ -2,25 +2,25 @@
 /**
  * WP Theme constants and setup functions
  *
- * @package TenUpTheme
+ * @package PorchyTenUpTheme
  */
 
 // Useful global constants.
-define( 'TENUP_THEME_VERSION', '0.1.0' );
-define( 'TENUP_THEME_TEMPLATE_URL', get_template_directory_uri() );
-define( 'TENUP_THEME_PATH', get_template_directory() . '/' );
-define( 'TENUP_THEME_INC', TENUP_THEME_PATH . 'includes/' );
-define( 'TENUP_THEME_BLOCK_DIR', TENUP_THEME_INC . 'blocks/' );
+define( 'PORCHYUP_THEME_VERSION', '0.1.0' );
+define( 'PORCHYUP_THEME_TEMPLATE_URL', get_template_directory_uri() );
+define( 'PORCHYUP_THEME_PATH', get_template_directory() . '/' );
+define( 'PORCHYUP_THEME_INC', PORCHYUP_THEME_PATH . 'includes/' );
+define( 'PORCHYUP_THEME_BLOCK_DIR', PORCHYUP_THEME_INC . 'blocks/' );
 
-require_once TENUP_THEME_INC . 'core.php';
-require_once TENUP_THEME_INC . 'overrides.php';
-require_once TENUP_THEME_INC . 'template-tags.php';
-require_once TENUP_THEME_INC . 'utility.php';
-require_once TENUP_THEME_INC . 'blocks.php';
+require_once PORCHYUP_THEME_INC . 'core.php';
+require_once PORCHYUP_THEME_INC . 'overrides.php';
+require_once PORCHYUP_THEME_INC . 'template-tags.php';
+require_once PORCHYUP_THEME_INC . 'utility.php';
+require_once PORCHYUP_THEME_INC . 'blocks.php';
 
 // Run the setup functions.
-TenUpTheme\Core\setup();
-TenUpTheme\Blocks\setup();
+PorchyTenUpTheme\Core\setup();
+PorchyTenUpTheme\Blocks\setup();
 
 // Require Composer autoloader if it exists.
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {

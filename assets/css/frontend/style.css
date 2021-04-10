@@ -1,5 +1,5 @@
 /**
- * TenUpTheme
+ * PorchyTenUpTheme
  * https://project-website.tld
  *
  */
@@ -14,17 +14,18 @@
 @import url("base/index.css");
 
 /* Layout - styles specific to layout */
-
-/* @import url("layout/index.css"); */
+@import url("layout/index.css");
 
 /* Templates */
 
 /* @import url("templates/index.css"); */
 
 /* Components */
-
-/* @import url("components/index.css"); */
+@import url("components/index.css");
 
 /* Gutenberg blocks */
 
-/* @import url("../blocks/index.css"); */
+@import url("../blocks/index.css");
+
+/* Shared styles */
+@import url("../shared/shared-style.css");

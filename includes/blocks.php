@@ -5,9 +5,9 @@
  * @package TenUpScaffold\Core
  */
 
-namespace TenUpTheme\Blocks;
+namespace PorchyTenUpTheme\Blocks;
 
-use TenUpTheme\Blocks\Example;
+use PorchyTenUpTheme\Blocks\Example;
 
 
 /**
@@ -50,7 +50,7 @@ function register_theme_blocks() {
 
 
 	// Require custom blocks.
-	require_once TENUP_THEME_BLOCK_DIR . '/example-block/register.php';
+	require_once PORCHYUP_THEME_BLOCK_DIR . '/example-block/register.php';
 
 	// Call block register functions for each block.
 	Example\register();
@@ -81,9 +81,9 @@ function filter_plugins_url( $url, $path ) {
 function blocks_editor_styles() {
 	wp_enqueue_style(
 		'editor-style',
-		TENUP_THEME_TEMPLATE_URL . '/dist/css/editor-style.css',
+		PORCHYUP_THEME_TEMPLATE_URL . '/dist/css/editor-style.css',
 		[],
-		TENUP_THEME_VERSION
+		PORCHYUP_THEME_VERSION
 	);
 
 }
@@ -106,7 +106,7 @@ function blocks_categories( $categories, $post ) {
 		array(
 			array(
 				'slug'  => 'tenup-scaffold-blocks',
-				'title' => __( 'Custom Blocks', 'tenup-theme' ),
+				'title' => __( 'Custom Blocks', 'porchy-tenup-theme' ),
 			),
 		)
 	);

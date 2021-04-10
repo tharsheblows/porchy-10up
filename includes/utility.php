@@ -8,10 +8,10 @@
  * to Namespaces.
  *
  * @link https://developer.wordpress.org/themes/basics/template-tags/
- * @package TenUpTheme
+ * @package PorchyTenUpTheme
  */
 
-namespace TenUpTheme\Utility;
+namespace PorchyTenUpTheme\Utility;
 
 /**
  * Get asset info from extracted asset files
@@ -21,11 +21,11 @@ namespace TenUpTheme\Utility;
  * @return string|array
  */
 function get_asset_info( $slug, $attribute = null ) {
-	if ( ! file_exists( TENUP_THEME_PATH . 'dist/' . $slug . '.asset.php' ) ) {
+	if ( ! file_exists( PORCHYUP_THEME_PATH . 'dist/' . $slug . '.asset.php' ) ) {
 		return null;
 	}
 
-	$asset = require TENUP_THEME_PATH . 'dist/' . $slug . '.asset.php';
+	$asset = require PORCHYUP_THEME_PATH . 'dist/' . $slug . '.asset.php';
 
 	if ( ! empty( $attribute ) && isset( $asset[ $attribute ] ) ) {
 		return $asset[ $attribute ];

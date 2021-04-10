@@ -1,0 +1,11 @@
+.post-columns {
+	display: flex;
+	justify-content: center;
+}
+
+.post-columns .wp-block-column {
+	border: 4px dotted var(--primary-color);
+	border-radius: 10px;
+	margin: 0.5em;
+	padding: 1em;
+}

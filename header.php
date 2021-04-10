@@ -2,7 +2,7 @@
 /**
  * The template for displaying the header.
  *
- * @package TenUpTheme
+ * @package PorchyTenUpTheme
  */
 
 ?>
@@ -15,4 +15,16 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<?php wp_body_open(); ?>
-		<h1><?php bloginfo( 'name' ); ?></h1>
+		<header class="site-header">
+			<h1><a href="/" class="blank"><img src="<?php PorchyTenUpTheme\TemplateTags\the_logo(); ?>" width="150px" alt="Porchy Ltd"></a></h1>
+			<?php
+				wp_nav_menu(
+					[
+						'menu'       => 'top',
+						'menu_class' => 'horizontal-list no-bullets alignright hide-small-width',
+						'container'  => 'nav',
+					]
+				);
+				// Put mobile menu here.
+			?>
+		</header>

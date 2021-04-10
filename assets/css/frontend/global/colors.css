@@ -4,4 +4,12 @@
 :root {
 	--c-black: #000;
 	--c-white: #fff;
+	--black: #1A0709;
+	--primary-color: #046B39;
+	--dark-contrast-color: #78232A;
+	--light-highlight-color: #B3F3FF;
+	--alt-light-highlight-color: #FFFDBF;
+	--old-light-highlight-color: #70F3FF;
+	--light-contrast-color: #9E1665;
+	--dark-highlight-color: #16939E;
 }

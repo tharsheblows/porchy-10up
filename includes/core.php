@@ -2,12 +2,12 @@
 /**
  * Core setup, site hooks and filters.
  *
- * @package TenUpTheme
+ * @package PorchyTenUpTheme
  */
 
-namespace TenUpTheme\Core;
+namespace PorchyTenUpTheme\Core;
 
-use TenUpTheme\Utility;
+use PorchyTenUpTheme\Utility;
 
 /**
  * Set up theme defaults and register supported WordPress features.
@@ -35,20 +35,22 @@ function setup() {
  * Makes Theme available for translation.
  *
  * Translations can be added to the /languages directory.
- * If you're building a theme based on "tenup-theme", change the
- * filename of '/languages/TenUpTheme.pot' to the name of your project.
+ * If you're building a theme based on "porchy-tenup-theme", change the
+ * filename of '/languages/PorchyTenUpTheme.pot' to the name of your project.
  *
  * @return void
  */
 function i18n() {
-	load_theme_textdomain( 'tenup-theme', TENUP_THEME_PATH . '/languages' );
+	load_theme_textdomain( 'porchy-tenup-theme', PORCHYUP_THEME_PATH . '/languages' );
 }
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
 function theme_setup() {
+	add_theme_support( 'align-wide' );
 	add_theme_support( 'automatic-feed-links' );
+	// add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support(
@@ -62,7 +64,7 @@ function theme_setup() {
 	// This theme uses wp_nav_menu() in three locations.
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary Menu', 'tenup-theme' ),
+			'top' => esc_html__( 'Top Menu', 'porchy-tenup-theme' ),
 		)
 	);
 }
@@ -76,7 +78,7 @@ function scripts() {
 
 	wp_enqueue_script(
 		'frontend',
-		TENUP_THEME_TEMPLATE_URL . '/dist/js/frontend.js',
+		PORCHYUP_THEME_TEMPLATE_URL . '/dist/js/frontend.js',
 		Utility\get_asset_info( 'frontend', 'dependencies' ),
 		Utility\get_asset_info( 'frontend', 'version' ),
 		true
@@ -85,7 +87,7 @@ function scripts() {
 	if ( is_page_template( 'templates/page-styleguide.php' ) ) {
 		wp_enqueue_script(
 			'styleguide',
-			TENUP_THEME_TEMPLATE_URL . '/dist/js/styleguide.js',
+			PORCHYUP_THEME_TEMPLATE_URL . '/dist/js/styleguide.js',
 			Utility\get_asset_info( 'styleguide', 'dependencies' ),
 			Utility\get_asset_info( 'styleguide', 'version' ),
 			true
@@ -95,7 +97,7 @@ function scripts() {
 	/*
 	wp_enqueue_script(
 		'shared',
-		TENUP_THEME_TEMPLATE_URL . '/dist/js/shared.js',
+		PORCHYUP_THEME_TEMPLATE_URL . '/dist/js/shared.js',
 		Utility\get_asset_info( 'shared', 'dependencies' ),
 		Utility\get_asset_info( 'shared', 'version' ),
 		true
@@ -111,7 +113,7 @@ function scripts() {
 function admin_scripts() {
 	wp_enqueue_script(
 		'admin',
-		TENUP_THEME_TEMPLATE_URL . '/dist/js/admin.js',
+		PORCHYUP_THEME_TEMPLATE_URL . '/dist/js/admin.js',
 		Utility\get_asset_info( 'admin', 'dependencies' ),
 		Utility\get_asset_info( 'admin', 'version' ),
 		true
@@ -120,7 +122,7 @@ function admin_scripts() {
 	/*
 	wp_enqueue_script(
 		'shared',
-		TENUP_THEME_TEMPLATE_URL . '/dist/js/shared.js',
+		PORCHYUP_THEME_TEMPLATE_URL . '/dist/js/shared.js',
 		Utility\get_asset_info( 'shared', 'dependencies' ),
 		Utility\get_asset_info( 'shared', 'version' ),
 		true
@@ -137,7 +139,7 @@ function admin_styles() {
 
 	wp_enqueue_style(
 		'admin-style',
-		TENUP_THEME_TEMPLATE_URL . '/dist/css/admin-style.css',
+		PORCHYUP_THEME_TEMPLATE_URL . '/dist/css/admin-style.css',
 		[],
 		Utility\get_asset_info( 'admin-style', 'version' )
 	);
@@ -145,7 +147,7 @@ function admin_styles() {
 	/*
 	wp_enqueue_style(
 		'shared-style',
-		TENUP_THEME_TEMPLATE_URL . '/dist/css/shared-style.css',
+		PORCHYUP_THEME_TEMPLATE_URL . '/dist/css/shared-style.css',
 		[],
 		Utility\get_asset_info( 'shared-style', 'version' )
 	);
@@ -161,7 +163,7 @@ function styles() {
 
 	wp_enqueue_style(
 		'styles',
-		TENUP_THEME_TEMPLATE_URL . '/dist/css/style.css',
+		PORCHYUP_THEME_TEMPLATE_URL . '/dist/css/style.css',
 		[],
 		Utility\get_asset_info( 'style', 'version' )
 	);
@@ -169,7 +171,7 @@ function styles() {
 	if ( is_page_template( 'templates/page-styleguide.php' ) ) {
 		wp_enqueue_style(
 			'styleguide',
-			TENUP_THEME_TEMPLATE_URL . '/dist/css/styleguide-style.css',
+			PORCHYUP_THEME_TEMPLATE_URL . '/dist/css/styleguide-style.css',
 			[],
 			Utility\get_asset_info( 'styleguide-style', 'version' )
 		);
@@ -228,5 +230,5 @@ function script_loader_tag( $tag, $handle ) {
  * @return void
  */
 function add_manifest() {
-	echo "<link rel='manifest' href='" . esc_url( TENUP_THEME_TEMPLATE_URL . '/manifest.json' ) . "' />";
+	echo "<link rel='manifest' href='" . esc_url( PORCHYUP_THEME_TEMPLATE_URL . '/manifest.json' ) . "' />";
 }

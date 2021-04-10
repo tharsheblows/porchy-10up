@@ -2,13 +2,13 @@
 /**
  * Template Name: Style Guide
  *
- * @package TenUpTheme
+ * @package PorchyTenUpTheme
  */
 
-namespace TenUpTheme\Utility;
+namespace PorchyTenUpTheme\Utility;
 
-use function TenUpTheme\Utility\adjust_brightness;
-use function TenUpTheme\Utility\get_colors;
+use function PorchyTenUpTheme\Utility\adjust_brightness;
+use function PorchyTenUpTheme\Utility\get_colors;
 
 get_header();
 ?>
