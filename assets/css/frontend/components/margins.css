@@ -2,6 +2,10 @@
 	margin-left: 1em;
 }
 
+.margin-right {
+	margin-right: 1em;
+}
+
 .a--margin-left {
 	margin-left: var(--a--margin-left);
 }

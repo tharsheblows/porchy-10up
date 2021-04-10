@@ -12,8 +12,8 @@ a {
 	background-color: var(--light-highlight-color);
 	border: 4px solid var(--light-highlight-color);
 	color: var(--black);
-	padding: var(--a--margin-left);
 	display: inline-block;
+	padding: var(--a--margin-left);
 }
 
 a:hover {

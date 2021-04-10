@@ -6,16 +6,17 @@
 @import url("lists.css");
 @import url("margins.css");
 
-header.site-header, footer.site-footer {
-	margin: 0 1em;
+header.site-header,
+footer.site-footer {
+	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	margin: 0 1em;
 }
 
 footer.site-footer {
 	background-color: var(--primary-color);
-	color: white;
+	color: var(--c-white);
 	font-size: smaller;
 	line-height: 1.5;
 	margin: 0;
@@ -24,8 +25,8 @@ footer.site-footer {
 
 footer.site-footer a {
 	background-color: transparent;
-	color: white;
 	border: none;
+	color: var(--c-white);
 	text-decoration: none;
 }
 
